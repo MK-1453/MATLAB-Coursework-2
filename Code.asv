@@ -73,7 +73,8 @@ for min = 0:10
     output = [output sprintf('Minute\t\t%d\nTemperature\t%.2f C\n\n',min,temp(index))];
 end
 
-output = [output sprintf('Max temp\t%.2f C\nMin temp\t%.2f C\nAverage temp\t%.2f C\n\nData logging terminated\n',max_temp,min_temp,avg_temp)];
+output = [output sprintf('Max temp\t%.2f C\nMin temp\t%.2f C\nAverage temp\t%.2f C\n\nData logging terminated\n',...
+    max_temp,min_temp,avg_temp)];
 
 fprintf('%s',output)
 
@@ -92,8 +93,10 @@ fclose(fileID);
 
 disp(fileText)
 %% TASK 2 - LED TEMPERATURE MONITORING DEVICE IMPLEMENTATION [25 MARKS]
+clear
+a = arduino('COM5','UNO');
 
-
+temp_monitor(a)
 
 
 %% TASK 3 - ALGORITHMS – TEMPERATURE PREDICTION [30 MARKS]
