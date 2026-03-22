@@ -101,8 +101,11 @@ temp_monitor(a)
 
 
 %% TASK 3 - ALGORITHMS – TEMPERATURE PREDICTION [30 MARKS]
+clear
+a = arduino('COM5','UNO');
 
-% Insert answers here
+temp_prediction(a);
+
 
 
 %% TASK 4 - REFLECTIVE STATEMENT [5 MARKS]
