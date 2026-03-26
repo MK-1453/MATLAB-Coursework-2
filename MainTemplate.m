@@ -40,7 +40,7 @@ for x = 1:no_samples
     %Voltage to temp
     temp(x) = (voltage(x) - V0) / T_coeff;
 
-    Ensuring Measuremnts are taken in 10 mins
+    %Ensuring Measuremnts are taken in 10 mins
     if x < no_samples
         pause(1);
     end
@@ -104,7 +104,7 @@ temp_monitor(a)
 clear
 a = arduino('COM5','UNO');
 
-temp_prediction(a);
+temp_prediction(a)
 
 
 
